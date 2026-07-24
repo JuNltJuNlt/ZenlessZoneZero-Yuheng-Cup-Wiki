@@ -53,10 +53,10 @@ html, body {
     font-size: clamp(1.2rem, 2.5vw, 2rem);
     color: #ffffff;
     text-align: center;
-    letter-spacing: 0.15em;
     position: absolute;
-    top: 20%;
-    transform: translateY(-50%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     pointer-events: auto;
 }
 
@@ -67,10 +67,10 @@ html, body {
     font-size: clamp(0.9rem, 1.8vw, 1.4rem);
     color: #ffffff;
     text-align: center;
-    letter-spacing: 0.1em;
     position: absolute;
     top: 65%;
-    transform: translateY(-50%);
+    left: 50%;
+    transform: translate(-50%, -50%);
     pointer-events: auto;
 }
 
