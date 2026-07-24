@@ -107,13 +107,14 @@ html, body {
 
 .game-tag {
     position: absolute;
-    top: 12%;
+    top: 6%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 4;
     display: inline-block;
     padding: 4px 0;
-    width: 20%;
+    width: 26%;
+    min-height: 2.4em;
     border: 2px solid #9b59b6;
     border-radius: 8px;
     background-color: transparent;
@@ -124,6 +125,9 @@ html, body {
     color: #000000;
     text-align: center;
     white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .star-bottom {
