@@ -91,7 +91,7 @@ html, body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 20%;
+    height: 30%;
     background-color: #ffffff;
 }
 
@@ -101,8 +101,28 @@ html, body {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 80%;
+    height: 70%;
     background-color: #d0d0d0;
+}
+
+.game-tag {
+    position: absolute;
+    top: 12%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 4;
+    display: inline-block;
+    padding: 6px 40px;
+    border: 2px solid #9b59b6;
+    border-radius: 20px;
+    background-color: transparent;
+    font-family: "Microsoft YaHei", "微软雅黑", "PingFang SC", "Hiragino Sans GB", 
+                 "Noto Sans CJK SC", "Source Han Sans SC", sans-serif;
+    font-weight: 400;
+    font-size: clamp(0.85rem, 1.4vw, 1.2rem);
+    color: #000000;
+    text-align: center;
+    white-space: nowrap;
 }
 
 .star-bottom {
