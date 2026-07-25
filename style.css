@@ -129,6 +129,21 @@ html, body {
     white-space: nowrap;
 }
 
+.countdown {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 4;
+    font-family: "Microsoft YaHei", "微软雅黑", "PingFang SC", "Hiragino Sans GB", 
+                 "Noto Sans CJK SC", "Source Han Sans SC", sans-serif;
+    font-weight: 700;
+    font-size: clamp(0.7rem, 1.1vw, 0.95rem);
+    color: #000000;
+    text-align: center;
+    white-space: nowrap;
+}
+
 .nav-item {
     position: absolute;
     bottom: 76%;
