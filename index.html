@@ -15,8 +15,8 @@
     </div>
     <div class="white-board">
         <div class="game-tag">绝区零</div>
-        <div class="countdown" id="countdown">3.1  00:00:00</div>
-        <div class="nav-item">公式大全</div>
+        <div class="countdown" id="countdown">3.1  --:--:--</div>
+        <a href="formulas.html" class="nav-item">公式大全</a>
         <div class="module-nav">
             <a href="Monster.html" class="module-btn">怪物</a>
             <a href="Shiyu Defence.html" class="module-btn module-center">式舆防卫战</a>
@@ -25,29 +25,37 @@
     </div>
     <div class="star-bottom"></div>
     <script>
-        function updateCountdown() {
+        (function() {
+            var countdownEl = document.getElementById('countdown');
             var target = new Date('2026-07-29T06:00:00');
-            var now = new Date();
-            var diff = target - now;
             
-            if (diff <= 0) {
-                document.getElementById('countdown').textContent = '3.1  00:00:00';
-                return;
+            function pad(num, len) {
+                var str = '' + num;
+                while (str.length < len) {
+                    str = '0' + str;
+                }
+                return str;
             }
             
-            var hours = Math.floor(diff / (1000 * 60 * 60));
-            var minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-            var seconds = Math.floor((diff % (1000 * 60)) / 1000);
+            function updateCountdown() {
+                var now = new Date();
+                var diff = target - now;
+                
+                if (diff <= 0) {
+                    countdownEl.textContent = '3.1  00:00:00';
+                    return;
+                }
+                
+                var hours = Math.floor(diff / (1000 * 60 * 60));
+                var minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((diff % (1000 * 60)) / 1000);
+                
+                countdownEl.textContent = '3.1  ' + pad(hours, 2) + ':' + pad(minutes, 2) + ':' + pad(seconds, 2);
+            }
             
-            var hh = hours < 10 ? '0' + hours : '' + hours;
-            var mm = minutes < 10 ? '0' + minutes : '' + minutes;
-            var ss = seconds < 10 ? '0' + seconds : '' + seconds;
-            
-            document.getElementById('countdown').textContent = '3.1  ' + hh + ':' + mm + ':' + ss;
-        }
-        
-        updateCountdown();
-        setInterval(updateCountdown, 1000);
+            updateCountdown();
+            setInterval(updateCountdown, 1000);
+        })();
     </script>
 </body>
 </html>
