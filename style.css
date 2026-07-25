@@ -82,6 +82,128 @@ html, body {
     pointer-events: auto;
 }
 
+.menu-container {
+    position: fixed;
+    top: 17.5%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 10;
+    pointer-events: auto;
+}
+
+.menu-icon {
+    display: block;
+    width: clamp(24px, 3vw, 36px);
+    height: auto;
+    cursor: pointer;
+    margin: 0 auto;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+}
+
+.menu-dialog {
+    display: none;
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 16px 20px;
+    min-width: 260px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    z-index: 11;
+    text-align: center;
+}
+
+.menu-dialog.show {
+    display: block;
+}
+
+.menu-arrow {
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid #ffffff;
+}
+
+.menu-title {
+    font-family: "Microsoft YaHei", "微软雅黑", "PingFang SC", "Hiragino Sans GB", 
+                 "Noto Sans CJK SC", "Source Han Sans SC", sans-serif;
+    font-weight: 700;
+    font-size: clamp(0.9rem, 1.3vw, 1.1rem);
+    color: #000000;
+    text-align: center;
+    margin-bottom: 14px;
+}
+
+.menu-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2.4em;
+    padding: 6px 12px;
+    border: 2.5px solid #000000;
+    border-radius: 4px;
+    background-color: #000000;
+    font-family: "Microsoft YaHei", "微软雅黑", "PingFang SC", "Hiragino Sans GB", 
+                 "Noto Sans CJK SC", "Source Han Sans SC", sans-serif;
+    font-weight: 400;
+    font-size: clamp(0.75rem, 1vw, 0.9rem);
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.menu-btn:hover {
+    background-color: #1a1a1a;
+}
+
+.menu-btn:active {
+    background-color: #333333;
+}
+
+.menu-btn-full {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.menu-btn-row {
+    display: flex;
+    gap: 8px;
+}
+
+.menu-btn-row .menu-btn {
+    flex: 1;
+    min-width: 0;
+}
+
+@media (max-width: 400px) {
+    .menu-dialog {
+        min-width: 220px;
+        padding: 12px 14px;
+    }
+
+    .menu-btn {
+        font-size: clamp(0.65rem, 2.5vw, 0.8rem);
+        min-height: 2.2em;
+        padding: 5px 8px;
+    }
+
+    .menu-btn-row {
+        gap: 4px;
+    }
+}
+
 .white-board {
     position: fixed;
     left: 0;
@@ -245,7 +367,6 @@ html, body {
     pointer-events: none;
 }
 
-/* ===== 手机端优化 ===== */
 @media (max-width: 768px) {
     .site-title {
         font-size: clamp(1.6rem, 5vw, 2rem);
@@ -255,6 +376,10 @@ html, body {
     .site-version {
         font-size: clamp(0.9rem, 3vw, 1.1rem);
         top: 14%;
+    }
+
+    .menu-container {
+        top: 17%;
     }
 
     .game-tag {
@@ -310,6 +435,10 @@ html, body {
     .site-version {
         font-size: clamp(0.8rem, 3.5vw, 1rem);
         top: 14%;
+    }
+
+    .menu-container {
+        top: 16.5%;
     }
 
     .game-tag {
