@@ -15,7 +15,7 @@
     </div>
     <div class="white-board">
         <div class="game-tag">绝区零</div>
-        <div class="countdown" id="countdown">3.1 00:00:00</div>
+        <div class="countdown" id="countdown">3.1  00:00:00</div>
         <div class="nav-item">公式大全</div>
     </div>
     <div class="star-bottom"></div>
@@ -26,7 +26,7 @@
             var diff = target - now;
             
             if (diff <= 0) {
-                document.getElementById('countdown').textContent = '3.1 00:00:00';
+                document.getElementById('countdown').textContent = '3.1  00:00:00';
                 return;
             }
             
@@ -38,7 +38,7 @@
             var mm = minutes < 10 ? '0' + minutes : '' + minutes;
             var ss = seconds < 10 ? '0' + seconds : '' + seconds;
             
-            document.getElementById('countdown').textContent = '3.1 ' + hh + ':' + mm + ':' + ss;
+            document.getElementById('countdown').textContent = '3.1  ' + hh + ':' + mm + ':' + ss;
         }
         
         updateCountdown();
