@@ -113,13 +113,14 @@ html, body {
     border: 3px solid #000000;
     border-radius: 8px;
     padding: 20px 24px;
-    width: 50%;
-    max-width: 500px;
-    max-height: 66.67%;
+    width: 35%;
+    height: 66.67%;
+    max-width: 450px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
     z-index: 1000;
     text-align: center;
     pointer-events: auto;
+    overflow-y: auto;
 }
 
 .menu-dialog.show {
@@ -167,15 +168,15 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 2.6em;
-    padding: 8px 12px;
+    min-height: 2.4em;
+    padding: 6px 0;
     border: 2px solid #000000;
     border-radius: 4px;
     background-color: #ffffff;
     font-family: "Microsoft YaHei", "微软雅黑", "PingFang SC", "Hiragino Sans GB", 
                  "Noto Sans CJK SC", "Source Han Sans SC", sans-serif;
     font-weight: 400;
-    font-size: clamp(0.8rem, 1.1vw, 1rem);
+    font-size: clamp(0.75rem, 1vw, 0.9rem);
     color: #000000;
     text-align: center;
     text-decoration: none;
@@ -199,13 +200,13 @@ html, body {
 
 .menu-btn-full {
     width: 26%;
-    margin: 0 auto 14px auto;
+    margin: 0 auto 12px auto;
 }
 
 .menu-btn-row {
     display: flex;
     justify-content: center;
-    gap: 4%;
+    gap: 3%;
 }
 
 .menu-btn-row .menu-btn {
@@ -395,20 +396,21 @@ html, body {
     .menu-dialog {
         top: calc(15.5% + clamp(16px, 2vw, 24px));
         width: 65%;
+        height: 60%;
         padding: 16px 14px;
     }
 
     .menu-btn {
-        width: 35%;
+        width: 40%;
         font-size: clamp(0.75rem, 2vw, 0.9rem);
     }
 
     .menu-btn-full {
-        width: 35%;
+        width: 40%;
     }
 
     .menu-btn-row .menu-btn {
-        width: 35%;
+        width: 40%;
     }
 
     .game-tag {
@@ -473,18 +475,19 @@ html, body {
     .menu-dialog {
         top: calc(15% + clamp(14px, 1.8vw, 20px));
         width: 80%;
+        height: 55%;
         padding: 14px 10px;
     }
 
     .menu-btn {
-        width: 42%;
+        width: 45%;
         font-size: clamp(0.7rem, 2.5vw, 0.8rem);
         min-height: 2.2em;
         padding: 5px 8px;
     }
 
     .menu-btn-full {
-        width: 42%;
+        width: 45%;
     }
 
     .menu-btn-row {
@@ -492,7 +495,7 @@ html, body {
     }
 
     .menu-btn-row .menu-btn {
-        width: 42%;
+        width: 45%;
     }
 
     .game-tag {
