@@ -111,10 +111,12 @@ html, body {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 4;
-    display: inline-block;
-    padding: 4px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 26%;
     min-height: 2.4em;
+    padding: 4px 0;
     border: 2px solid #9b59b6;
     border-radius: 8px;
     background-color: transparent;
@@ -125,9 +127,30 @@ html, body {
     color: #000000;
     text-align: center;
     white-space: nowrap;
+}
+
+.nav-item {
+    position: absolute;
+    bottom: 6%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    z-index: 4;
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 6.5%;
+    min-height: 2.4em;
+    padding: 4px 0;
+    border: 2px solid #9b59b6;
+    border-radius: 8px;
+    background-color: transparent;
+    font-family: "Microsoft YaHei", "微软雅黑", "PingFang SC", "Hiragino Sans GB", 
+                 "Noto Sans CJK SC", "Source Han Sans SC", sans-serif;
+    font-weight: 400;
+    font-size: clamp(0.7rem, 1.1vw, 0.95rem);
+    color: #000000;
+    text-align: center;
+    white-space: nowrap;
 }
 
 .star-bottom {
