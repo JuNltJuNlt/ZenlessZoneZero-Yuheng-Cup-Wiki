@@ -178,14 +178,14 @@ html, body {
     align-items: center;
     justify-content: center;
     gap: 2%;
-    width: 90%;
+    width: 96%;
 }
 
 .module-btn {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 52%;
+    width: 64%;
     min-height: 2.8em;
     padding: 4px 0;
     border: 2px solid #1a1a2e;
@@ -202,7 +202,7 @@ html, body {
 }
 
 .module-center {
-    width: 52%;
+    width: 64%;
 }
 
 .star-bottom {
