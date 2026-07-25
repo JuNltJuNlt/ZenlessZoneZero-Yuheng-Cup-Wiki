@@ -178,7 +178,7 @@ html, body {
     align-items: center;
     justify-content: center;
     min-height: 2.6em;
-    padding: 8px 16px;
+    padding: 8px 0;
     border: 2px solid #000000;
     border-radius: 4px;
     background-color: #ffffff;
@@ -193,8 +193,8 @@ html, body {
     cursor: pointer;
     transition: background-color 0.2s ease;
     -webkit-tap-highlight-color: transparent;
-    width: auto;
-    padding: 8px 18px;
+    width: 160px;
+    margin: 0 auto;
 }
 
 .menu-btn:hover {
@@ -206,8 +206,7 @@ html, body {
 }
 
 .menu-btn-full {
-    width: auto;
-    padding: 8px 40px;
+    width: 160px;
     margin: 0 auto 12px auto;
 }
 
@@ -221,9 +220,9 @@ html, body {
 
 .menu-btn-row .menu-btn {
     flex: 0 0 auto;
-    width: auto;
+    width: 160px;
     min-width: 0;
-    padding: 8px 14px;
+    padding: 8px 0;
 }
 
 .white-board {
@@ -405,24 +404,24 @@ html, body {
     }
 
     .menu-dialog {
-        top: calc(15.5% + clamp(16px, 2vw, 24px));
-        width: auto;
+        top: calc(15.5% + clamp(16px, 2vw, 24px) - 100px);
         min-width: 250px;
         max-height: 55vh;
         padding: 16px 14px;
     }
 
     .menu-btn {
+        width: 140px;
         font-size: clamp(0.75rem, 2vw, 0.9rem);
-        padding: 8px 14px;
     }
 
     .menu-btn-full {
-        padding: 8px 30px;
+        width: 140px;
     }
 
     .menu-btn-row .menu-btn {
-        padding: 8px 10px;
+        width: 140px;
+        padding: 8px 0;
     }
 
     .game-tag {
@@ -485,21 +484,20 @@ html, body {
     }
 
     .menu-dialog {
-        top: calc(15% + clamp(14px, 1.8vw, 20px));
-        width: auto;
+        top: calc(15% + clamp(14px, 1.8vw, 20px) - 100px);
         min-width: 220px;
         max-height: 50vh;
         padding: 14px 10px;
     }
 
     .menu-btn {
+        width: 130px;
         font-size: clamp(0.7rem, 2.5vw, 0.8rem);
         min-height: 2.2em;
-        padding: 6px 10px;
     }
 
     .menu-btn-full {
-        padding: 6px 24px;
+        width: 130px;
     }
 
     .menu-btn-row {
@@ -507,7 +505,8 @@ html, body {
     }
 
     .menu-btn-row .menu-btn {
-        padding: 6px 8px;
+        width: 130px;
+        padding: 6px 0;
     }
 
     .game-tag {
