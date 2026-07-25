@@ -15,8 +15,34 @@
     </div>
     <div class="white-board">
         <div class="game-tag">绝区零</div>
+        <div class="countdown" id="countdown">3.1 00:00:00</div>
         <div class="nav-item">公式大全</div>
     </div>
     <div class="star-bottom"></div>
+    <script>
+        function updateCountdown() {
+            var target = new Date('2026-07-29T06:00:00');
+            var now = new Date();
+            var diff = target - now;
+            
+            if (diff <= 0) {
+                document.getElementById('countdown').textContent = '3.1 00:00:00';
+                return;
+            }
+            
+            var hours = Math.floor(diff / (1000 * 60 * 60));
+            var minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((diff % (1000 * 60)) / 1000);
+            
+            var hh = hours < 10 ? '0' + hours : '' + hours;
+            var mm = minutes < 10 ? '0' + minutes : '' + minutes;
+            var ss = seconds < 10 ? '0' + seconds : '' + seconds;
+            
+            document.getElementById('countdown').textContent = '3.1 ' + hh + ':' + mm + ':' + ss;
+        }
+        
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+    </script>
 </body>
 </html>
