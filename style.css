@@ -84,7 +84,7 @@ html, body {
 
 .menu-container {
     position: fixed;
-    top: 17.5%;
+    top: 16%;
     left: 50%;
     transform: translate(-50%, 0);
     z-index: 10;
@@ -93,7 +93,7 @@ html, body {
 
 .menu-icon {
     display: block;
-    width: clamp(24px, 3vw, 36px);
+    width: clamp(14px, 1.8vw, 22px);
     height: auto;
     cursor: pointer;
     margin: 0 auto;
