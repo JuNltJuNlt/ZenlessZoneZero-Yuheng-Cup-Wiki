@@ -8,6 +8,7 @@ html, body {
     width: 100%;
     height: 100%;
     min-height: 100vh;
+    min-height: 100dvh;
     overflow-x: hidden;
     font-family: "Microsoft YaHei", "微软雅黑", "PingFang SC", "Hiragino Sans GB", 
                  "Noto Sans CJK SC", "Source Han Sans SC", sans-serif;
@@ -15,6 +16,9 @@ html, body {
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
     background-color: #0a0a1a;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: 100%;
+    touch-action: manipulation;
 }
 
 .star-bg {
@@ -23,6 +27,7 @@ html, body {
     left: 0;
     width: 100%;
     height: 100%;
+    height: 100dvh;
     background-image: url('image/bg.jpg');
     background-size: cover;
     background-position: center;
@@ -30,6 +35,7 @@ html, body {
     z-index: 0;
     will-change: transform;
     transform: translateZ(0);
+    background-color: #0a0a1a;
 }
 
 .star-top {
@@ -166,6 +172,18 @@ html, body {
     color: #000000;
     text-align: center;
     white-space: nowrap;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.nav-item:hover {
+    background-color: rgba(155, 89, 182, 0.1);
+}
+
+.nav-item:active {
+    background-color: rgba(155, 89, 182, 0.2);
 }
 
 .module-nav {
@@ -177,7 +195,6 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 2%;
     width: 96%;
 }
 
@@ -188,6 +205,7 @@ html, body {
     width: 64%;
     min-height: 2.8em;
     padding: 4px 0;
+    margin: 0 1%;
     border: 2px solid #1a1a2e;
     border-radius: 4px;
     background-color: #1a1a2e;
@@ -199,6 +217,18 @@ html, body {
     text-align: center;
     text-decoration: none;
     white-space: nowrap;
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.module-btn:hover {
+    background-color: #2a2a4e;
+    border-color: #3a3a5e;
+}
+
+.module-btn:active {
+    background-color: #0f0f1f;
 }
 
 .module-center {
@@ -213,4 +243,102 @@ html, body {
     height: 12.5%;
     z-index: 1;
     pointer-events: none;
+}
+
+/* ===== 手机端优化 ===== */
+@media (max-width: 768px) {
+    .site-title {
+        font-size: clamp(1.6rem, 5vw, 2rem);
+        top: 7%;
+    }
+
+    .site-version {
+        font-size: clamp(0.9rem, 3vw, 1.1rem);
+        top: 14%;
+    }
+
+    .game-tag {
+        width: 50%;
+        min-height: 2.2em;
+        top: 7%;
+        font-size: clamp(0.75rem, 2.5vw, 0.9rem);
+    }
+
+    .countdown {
+        top: 16%;
+        font-size: clamp(0.75rem, 2.5vw, 0.9rem);
+    }
+
+    .nav-item {
+        width: 18%;
+        min-height: 2.2em;
+        bottom: 74%;
+        font-size: clamp(0.75rem, 2.5vw, 0.9rem);
+    }
+
+    .module-nav {
+        top: 33%;
+        width: 92%;
+        flex-wrap: nowrap;
+    }
+
+    .module-btn {
+        width: auto;
+        flex: 1;
+        min-width: 0;
+        min-height: 2.6em;
+        margin: 0 1.5%;
+        padding: 6px 8px;
+        font-size: clamp(0.7rem, 2.2vw, 0.85rem);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .module-center {
+        width: auto;
+        flex: 1;
+    }
+}
+
+@media (max-width: 400px) {
+    .site-title {
+        font-size: clamp(1.4rem, 6vw, 1.8rem);
+        top: 6%;
+    }
+
+    .site-version {
+        font-size: clamp(0.8rem, 3.5vw, 1rem);
+        top: 14%;
+    }
+
+    .game-tag {
+        width: 55%;
+        top: 7%;
+        font-size: clamp(0.7rem, 3vw, 0.85rem);
+    }
+
+    .countdown {
+        top: 16.5%;
+        font-size: clamp(0.7rem, 3vw, 0.85rem);
+    }
+
+    .nav-item {
+        width: 22%;
+        bottom: 73%;
+        font-size: clamp(0.7rem, 3vw, 0.85rem);
+    }
+
+    .module-nav {
+        top: 34%;
+        width: 94%;
+    }
+
+    .module-btn {
+        min-height: 2.4em;
+        margin: 0 1%;
+        padding: 5px 4px;
+        font-size: clamp(0.6rem, 2.5vw, 0.78rem);
+        border-width: 1.5px;
+    }
 }
