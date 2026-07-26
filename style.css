@@ -59,7 +59,7 @@ html, body {
     transform: translate(-50%, -50%);
     z-index: 3;
     pointer-events: auto;
-    width: clamp(180px, 25vw, 350px);
+    width: clamp(100px, 15vw, 220px);
     height: auto;
 }
 
