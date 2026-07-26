@@ -9,6 +9,7 @@ html, body {
     min-height: 100vh;
     min-height: 100dvh;
     overflow-x: hidden;
+    overflow-y: visible;
     font-family: "Microsoft YaHei", "微软雅黑", "PingFang SC", "Hiragino Sans GB", 
                  "Noto Sans CJK SC", "Source Han Sans SC", sans-serif;
     -webkit-font-smoothing: antialiased;
