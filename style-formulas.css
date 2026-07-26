@@ -305,6 +305,31 @@ html, body {
     color: #f0c060;
 }
 
+.formula-center-bold {
+    text-align: center;
+    font-weight: 700;
+}
+
+.formula-fraction {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.fraction-top {
+    display: block;
+}
+
+.fraction-line {
+    display: block;
+    border-top: 1px solid #ffffff;
+    margin: 2px 0;
+}
+
+.fraction-bottom {
+    display: block;
+}
+
 @media (max-width: 768px) {
     .formula-grid {
         grid-template-columns: 1fr;
