@@ -42,7 +42,7 @@ html, body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 20.83vh;
+    height: 22vh;
     z-index: 1;
     pointer-events: none;
     display: flex;
@@ -51,19 +51,15 @@ html, body {
     align-items: center;
 }
 
-.site-title {
-    font-family: "Microsoft YaHei", "微软雅黑", "PingFang SC", "Hiragino Sans GB", 
-                 "Noto Sans CJK SC", "Source Han Sans SC", sans-serif;
-    font-weight: 400;
-    font-size: clamp(1.4rem, 3vw, 2.4rem);
-    color: #ffffff;
-    text-align: center;
+.site-logo {
     position: absolute;
-    top: 40%;
+    top: 38%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 3;
     pointer-events: auto;
+    width: clamp(100px, 15vw, 220px);
+    height: auto;
 }
 
 .site-version {
@@ -74,7 +70,7 @@ html, body {
     color: #ffffff;
     text-align: center;
     position: absolute;
-    top: 66.4%;
+    top: 72%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 3;
@@ -83,7 +79,7 @@ html, body {
 
 .menu-container {
     position: absolute;
-    top: 76.8%;
+    top: 82%;
     left: 50%;
     transform: translate(-50%, 0);
     z-index: 10;
@@ -105,7 +101,7 @@ html, body {
 .menu-dialog {
     display: flex;
     position: fixed;
-    top: calc(16% + clamp(18px, 2.2vw, 28px) - 100px);
+    top: calc(18% + clamp(18px, 2.2vw, 28px) - 100px);
     left: 50%;
     transform: translateX(-50%) translateY(-20px);
     transform-origin: top center;
@@ -227,7 +223,7 @@ html, body {
 .white-board {
     position: relative;
     z-index: 2;
-    margin-top: 20.83vh;
+    margin-top: 22vh;
     width: 100%;
     min-height: 100vh;
     background-color: #ffffff;
@@ -331,6 +327,11 @@ html, body {
 }
 
 @media (max-width: 768px) {
+    .site-logo {
+        top: 36%;
+        width: clamp(80px, 30vw, 180px);
+    }
+
     .formula-grid {
         grid-template-columns: 1fr;
         gap: 20px;
@@ -346,7 +347,7 @@ html, body {
     }
 
     .menu-dialog {
-        top: calc(15.5% + clamp(16px, 2vw, 24px) - 100px);
+        top: calc(17% + clamp(16px, 2vw, 24px) - 100px);
         min-width: 250px;
         max-height: 55vh;
         padding: 16px 14px;
@@ -368,8 +369,12 @@ html, body {
 }
 
 @media (max-width: 400px) {
+    .site-logo {
+        top: 34%;
+        width: clamp(70px, 35vw, 150px);
+    }
+
     .formula-grid {
-        grid-template-columns: 1fr;
         gap: 16px;
     }
 
@@ -382,7 +387,7 @@ html, body {
     }
 
     .menu-dialog {
-        top: calc(15% + clamp(14px, 1.8vw, 20px) - 100px);
+        top: calc(16% + clamp(14px, 1.8vw, 20px) - 100px);
         min-width: 220px;
         max-height: 50vh;
         padding: 14px 10px;
