@@ -112,6 +112,8 @@
             var menuIcon = document.getElementById('menuIcon');
             var menuDialog = document.getElementById('menuDialog');
             
+            if (!menuIcon || !menuDialog) return;
+            
             menuIcon.addEventListener('click', function(e) {
                 e.stopPropagation();
                 if (menuDialog.classList.contains('show')) {
@@ -122,8 +124,10 @@
             });
             
             document.addEventListener('click', function(e) {
-                if (!menuDialog.contains(e.target) && e.target !== menuIcon) {
-                    menuDialog.classList.remove('show');
+                if (menuDialog.classList.contains('show')) {
+                    if (!menuDialog.contains(e.target) && e.target !== menuIcon) {
+                        menuDialog.classList.remove('show');
+                    }
                 }
             });
         })();
