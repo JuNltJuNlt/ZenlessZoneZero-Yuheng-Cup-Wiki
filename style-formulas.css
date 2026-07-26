@@ -101,7 +101,7 @@ html, body {
 .menu-dialog {
     display: flex;
     position: fixed;
-    top: calc(18% + clamp(18px, 2.2vw, 28px) - 100px);
+    top: calc(22% + clamp(18px, 2.2vw, 28px) - 100px);
     left: 50%;
     transform: translateX(-50%) translateY(-20px);
     transform-origin: top center;
@@ -347,7 +347,7 @@ html, body {
     }
 
     .menu-dialog {
-        top: calc(17% + clamp(16px, 2vw, 24px) - 100px);
+        top: calc(20% + clamp(16px, 2vw, 24px) - 100px);
         min-width: 250px;
         max-height: 55vh;
         padding: 16px 14px;
@@ -387,7 +387,7 @@ html, body {
     }
 
     .menu-dialog {
-        top: calc(16% + clamp(14px, 1.8vw, 20px) - 100px);
+        top: calc(19% + clamp(14px, 1.8vw, 20px) - 100px);
         min-width: 220px;
         max-height: 50vh;
         padding: 14px 10px;
