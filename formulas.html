@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>公式大全 - 玉衡杯数据库</title>
+    <link rel="preload" as="image" href="image/bg.jpg">
+    <link rel="preload" as="image" href="image/menu.png">
+    <link rel="stylesheet" href="style-formulas.css">
+</head>
+<body>
+    <div class="star-bg"></div>
+    <div class="star-top">
+        <h1 class="site-title">玉衡杯数据库</h1>
+        <p class="site-version">3.1V12</p>
+    </div>
+    <div class="menu-container">
+        <img src="image/menu.png" alt="菜单" class="menu-icon" id="menuIcon">
+        <div class="menu-dialog" id="menuDialog">
+            <div class="menu-arrow"></div>
+            <div class="menu-title">菜单</div>
+            <a href="index.html" class="menu-btn menu-btn-full">返回主页</a>
+            <div class="menu-btn-row">
+                <a href="Monster.html" class="menu-btn">怪物</a>
+                <a href="Shiyu Defence.html" class="menu-btn">式舆防卫战</a>
+                <a href="Deadly Assault.html" class="menu-btn">危局强袭战</a>
+            </div>
+        </div>
+    </div>
+    <div class="white-board">
+        <div class="formula-grid">
+            <div class="formula-card">
+                <div class="formula-title">标题1</div>
+                <div class="formula-text">文本1</div>
+            </div>
+            <div class="formula-card">
+                <div class="formula-title">标题2</div>
+                <div class="formula-text">文本2</div>
+            </div>
+            <div class="formula-card">
+                <div class="formula-title">标题3</div>
+                <div class="formula-text">文本3</div>
+            </div>
+            <div class="formula-card">
+                <div class="formula-title">标题4</div>
+                <div class="formula-text">文本4</div>
+            </div>
+            <div class="formula-card">
+                <div class="formula-title">标题5</div>
+                <div class="formula-text">文本5</div>
+            </div>
+            <div class="formula-card">
+                <div class="formula-title">标题6</div>
+                <div class="formula-text">文本6</div>
+            </div>
+        </div>
+    </div>
+    <script>
+        (function() {
+            var menuIcon = document.getElementById('menuIcon');
+            var menuDialog = document.getElementById('menuDialog');
+            
+            menuIcon.addEventListener('click', function(e) {
+                e.stopPropagation();
+                if (menuDialog.classList.contains('show')) {
+                    menuDialog.classList.remove('show');
+                } else {
+                    menuDialog.classList.add('show');
+                }
+            });
+            
+            document.addEventListener('click', function(e) {
+                if (!menuDialog.contains(e.target) && e.target !== menuIcon) {
+                    menuDialog.classList.remove('show');
+                }
+            });
+        })();
+    </script>
+</body>
+</html>
