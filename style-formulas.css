@@ -78,8 +78,8 @@ html, body {
 }
 
 .menu-container {
-    position: absolute;
-    top: 82%;
+    position: fixed;
+    top: 18%;
     left: 50%;
     transform: translate(-50%, 0);
     z-index: 10;
@@ -101,7 +101,7 @@ html, body {
 .menu-dialog {
     display: flex;
     position: fixed;
-    top: calc(22% + clamp(18px, 2.2vw, 28px) - 100px);
+    top: calc(18% + clamp(18px, 2.2vw, 28px) - 100px);
     left: 50%;
     transform: translateX(-50%) translateY(-20px);
     transform-origin: top center;
@@ -332,22 +332,12 @@ html, body {
         width: clamp(80px, 30vw, 180px);
     }
 
-    .formula-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .formula-card {
-        padding: 18px 16px;
-        margin-bottom: 0;
-    }
-
-    .white-board {
-        padding: 20px 5% 60px 5%;
+    .menu-container {
+        top: 16.5%;
     }
 
     .menu-dialog {
-        top: calc(20% + clamp(16px, 2vw, 24px) - 100px);
+        top: calc(16.5% + clamp(16px, 2vw, 24px) - 100px);
         min-width: 250px;
         max-height: 55vh;
         padding: 16px 14px;
@@ -366,6 +356,20 @@ html, body {
         width: 140px;
         padding: 8px 0;
     }
+
+    .formula-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .formula-card {
+        padding: 18px 16px;
+        margin-bottom: 0;
+    }
+
+    .white-board {
+        padding: 20px 5% 60px 5%;
+    }
 }
 
 @media (max-width: 400px) {
@@ -374,20 +378,12 @@ html, body {
         width: clamp(70px, 35vw, 150px);
     }
 
-    .formula-grid {
-        gap: 16px;
-    }
-
-    .formula-card {
-        padding: 16px 14px;
-    }
-
-    .white-board {
-        padding: 16px 4% 40px 4%;
+    .menu-container {
+        top: 15.5%;
     }
 
     .menu-dialog {
-        top: calc(19% + clamp(14px, 1.8vw, 20px) - 100px);
+        top: calc(15.5% + clamp(14px, 1.8vw, 20px) - 100px);
         min-width: 220px;
         max-height: 50vh;
         padding: 14px 10px;
@@ -410,5 +406,17 @@ html, body {
     .menu-btn-row .menu-btn {
         width: 130px;
         padding: 6px 0;
+    }
+
+    .formula-grid {
+        gap: 16px;
+    }
+
+    .formula-card {
+        padding: 16px 14px;
+    }
+
+    .white-board {
+        padding: 16px 4% 40px 4%;
     }
 }
