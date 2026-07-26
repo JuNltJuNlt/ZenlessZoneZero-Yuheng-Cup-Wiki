@@ -274,7 +274,7 @@ html, body {
 .formula-card {
     background-color: #1a1a2e;
     border-radius: 4px;
-    padding: 20px;
+    padding: 16px 18px;
     color: #ffffff;
 }
 
@@ -282,17 +282,17 @@ html, body {
     font-family: "Microsoft YaHei", "微软雅黑", "PingFang SC", "Hiragino Sans GB", 
                  "Noto Sans CJK SC", "Source Han Sans SC", sans-serif;
     font-weight: 700;
-    font-size: clamp(1rem, 1.5vw, 1.3rem);
+    font-size: clamp(0.8rem, 1.1vw, 1rem);
     text-align: center;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
 
 .formula-text {
     font-family: "Microsoft YaHei", "微软雅黑", "PingFang SC", "Hiragino Sans GB", 
                  "Noto Sans CJK SC", "Source Han Sans SC", sans-serif;
     font-weight: 400;
-    font-size: clamp(0.85rem, 1.2vw, 1rem);
-    line-height: 1.8;
+    font-size: clamp(0.7rem, 0.95vw, 0.85rem);
+    line-height: 1.6;
     text-align: left;
 }
 
@@ -303,7 +303,7 @@ html, body {
     }
 
     .formula-card {
-        padding: 16px;
+        padding: 14px;
     }
 
     .white-board {
@@ -338,7 +338,7 @@ html, body {
     }
 
     .formula-card {
-        padding: 14px;
+        padding: 12px;
     }
 
     .white-board {
