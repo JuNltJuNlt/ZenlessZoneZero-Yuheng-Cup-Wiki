@@ -117,7 +117,7 @@
             function updateDialogPosition() {
                 var rect = menuIcon.getBoundingClientRect();
                 menuDialog.style.top = (rect.bottom + 10) + 'px';
-                menuDialog.style.left = rect.left + (rect.width / 2) + 'px';
+                menuDialog.style.left = (rect.left + rect.width / 2) + 'px';
                 menuDialog.style.transform = 'translateX(-50%)';
             }
             
