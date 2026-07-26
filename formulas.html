@@ -13,17 +13,17 @@
     <div class="star-top">
         <h1 class="site-title">玉衡杯数据库</h1>
         <p class="site-version">3.1V12</p>
-    </div>
-    <div class="menu-container">
-        <img src="image/menu.png" alt="菜单" class="menu-icon" id="menuIcon">
-        <div class="menu-dialog" id="menuDialog">
-            <div class="menu-arrow"></div>
-            <div class="menu-title">菜单</div>
-            <a href="index.html" class="menu-btn menu-btn-full">返回主页</a>
-            <div class="menu-btn-row">
-                <a href="Monster.html" class="menu-btn">怪物</a>
-                <a href="Shiyu Defence.html" class="menu-btn">式舆防卫战</a>
-                <a href="Deadly Assault.html" class="menu-btn">危局强袭战</a>
+        <div class="menu-container">
+            <img src="image/menu.png" alt="菜单" class="menu-icon" id="menuIcon">
+            <div class="menu-dialog" id="menuDialog">
+                <div class="menu-arrow"></div>
+                <div class="menu-title">菜单</div>
+                <a href="index.html" class="menu-btn menu-btn-full">返回主页</a>
+                <div class="menu-btn-row">
+                    <a href="Monster.html" class="menu-btn">怪物</a>
+                    <a href="Shiyu Defence.html" class="menu-btn">式舆防卫战</a>
+                    <a href="Deadly Assault.html" class="menu-btn">危局强袭战</a>
+                </div>
             </div>
         </div>
     </div>
@@ -32,14 +32,14 @@
         <p class="page-subtitle"><i>Hom<sub>dgCat</sub></i>(A ⊗ B, C) ≅ <i>Hom<sub>dgCat</sub></i>(A, <i>Hom</i>(B, C))</p>
         <div class="formula-grid">
             <div class="formula-card">
-                <div class="formula-title">防御力 抗性</div>
+                <div class="formula-title">防御力 抗性2</div>
                 <div class="formula-text">
                     通用抗性公式：（抗性不能超出该范围）<br><br>
-                    <div style="text-align: center; font-weight: 700;">抗性系数 = 1 - 抗性 （-100% ≤ 抗性 ≤ 100%）</div><br><br>
+                    <div style="text-align: center; font-weight: 700;">抗性系数 = 1 - 抗性 （-100% ≤ 抗性 ≤ 100%）</div><br><br><br>
                     绝区零抗性的一些特点：<br>
                     ① 绝区零共有三种抗性，分别为伤害、失衡和异常积蓄的抗性，三者相互独立，计算抗性系数时注意不要混用<br>
-                    ② 角色的伤害数字的颜色可反映抗性的范围：抗性≤-20% 时，对应属性的伤害数字会出现闪白效果；抗性＞20% 时，对应属性的伤害数字会变为灰色<br>
-                    ③ 怪物的抗性与自身弱点/抗性属性高度相关：一般情况下，敌人的弱点属性的三种抗性均为-20%，抗性属性的三种抗性均为20%；但部分敌人的抗性属性的伤害抗性会提高至 40%<br><br>
+                    ② 角色的伤害数字的颜色可反映抗性的范围：抗性 ≤ -20% 时，对应属性的伤害数字会出现闪白效果；抗性 ＞ 20% 时，对应属性的伤害数字会变为灰色<br>
+                    ③ 怪物的抗性与自身弱点/抗性属性高度相关：一般情况下，敌人的弱点属性的三种抗性均为 -20%，抗性属性的三种抗性均为 20%；但部分敌人的抗性属性的伤害抗性会提高至 40%<br><br>
                     通用防御公式：（同时适用于敌人/角色）<br><br>
                     <div style="text-align: center; font-weight: 700;">
                         <span style="display: inline-block; text-align: center; vertical-align: middle;">
@@ -95,6 +95,20 @@
                 if (!menuDialog.contains(e.target) && e.target !== menuIcon) {
                     menuDialog.classList.remove('show');
                 }
+            });
+        })();
+
+        (function() {
+            var formulaTexts = document.querySelectorAll('.formula-text');
+            formulaTexts.forEach(function(el) {
+                var html = el.innerHTML;
+                html = html.replace(/(\d+\.?\d*%?)/g, function(match) {
+                    if (match.indexOf('%') !== -1) {
+                        return '<span class="formula-highlight">' + match + '</span>';
+                    }
+                    return '<span class="formula-highlight">' + match + '</span>';
+                });
+                el.innerHTML = html;
             });
         })();
     </script>
