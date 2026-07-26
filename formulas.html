@@ -38,9 +38,9 @@
                     <div class="formula-center-bold">抗性系数 = 1 - 抗性 （-100% ≤ 抗性 ≤ 100%）</div><br><br>
                     绝区零抗性的一些特点：<br>
                     ① 绝区零共有三种抗性，分别为伤害、失衡和异常积蓄的抗性，三者相互独立，计算抗性系数时注意不要混用<br>
-                    ② 角色的伤害数字的颜色可反映抗性的范围：抗性 ≤ -20% 时，对应属性的伤害数字会出现闪白效果；抗性 ＞ 20% 时，对应属性的伤害数字会变为灰色<br>
+                    ② 代理人的伤害数字的颜色可反映抗性的范围：抗性 ≤ -20% 时，对应属性的伤害数字会出现闪白效果；抗性 ＞ 20% 时，对应属性的伤害数字会变为灰色<br>
                     ③ 怪物的抗性与自身弱点/抗性属性高度相关：一般情况下，敌人的弱点属性的三种抗性均为 -20%，抗性属性的三种抗性均为 20%；但部分敌人的抗性属性的伤害抗性会提高至 40%<br><br>
-                    通用防御公式：（同时适用于敌人/角色）<br><br>
+                    通用防御公式：（同时适用于敌人/代理人）<br><br>
                     <div class="formula-center-bold">
                         <span class="formula-fraction">
                             <span class="fraction-top">攻击方等级基数</span>
@@ -58,17 +58,17 @@
                             <span class="fraction-bottom">50</span>
                         </span>
                     </div><br><br>
-                    攻击方等级基数是一个定值，对于60级及以上的角色和敌人，攻击方等级基数取 794；其它等级的数值可自查：<a href="https://img.nga.cn/attachments/mon_202506/26/axvkQ1ad-abc4KrT3cSo1-rg.webp" target="_blank">攻击方等级基数表</a><br>
+                    攻击方等级基数是一个定值，对于60级及以上的代理人和敌人，攻击方等级基数取 794；其它等级的数值可自查：<a href="https://img.nga.cn/attachments/mon_202506/26/axvkQ1ad-abc4KrT3cSo1-rg.webp" target="_blank">攻击方等级基数表</a><br>
                     （目前，游戏中普通敌人的1级基础防御为 36-46；精英敌人的1级基础防御为 45-54，杜拉罕为 58；首领敌人的1级基础防御大多数为 60，低防怪可取 30，高防怪为 100）
                 </div>
             </div>
             <div class="formula-card">
                 <div class="formula-title">常规伤害</div>
                 <div class="formula-text">
-                    角色造成的常规伤害：<br><br>
+                    代理人造成的常规伤害：<br><br>
                     <div class="formula-center-bold">最终伤害 = 基础值 × (1 + 增伤% + 代理人减伤%) × (1 + 暴击伤害%) × (1 + 受击方易伤% - 受击方减伤%) × 失衡易伤% × 抗性系数 × 防御系数 × 特殊独立乘区</div><br><br>
                     <span class="formula-highlight">基础值</span>：攻击力 × 倍率，攻击力可以替换为其他属性（贯穿力、防御力等）<br><br>
-                    <span class="formula-highlight">增伤</span>：描述中带有【我方造成的伤害提升<span class="formula-highlight">X%</span>】的效果，但特别注意：贯穿增伤不与常规增伤加算，而是独立计算<br>
+                    <span class="formula-highlight">增伤</span>：描述中带有【代理人造成的伤害提升<span class="formula-highlight">X%</span>】的效果，但特别注意：贯穿增伤不与常规增伤加算，而是独立计算<br>
                     <span class="formula-highlight">易伤</span>：描述中带有【敌方受到的伤害提升<span class="formula-highlight">X%</span>】的效果<br>
                     <span class="formula-highlight">失衡易伤</span>：目前游戏中敌人的失衡易伤大多数为<span class="formula-highlight">125%</span>、<span class="formula-highlight">150%</span>、<span class="formula-highlight">200%</span>，且基本上只能在失衡期间触发；敌人未处于失衡时，失衡易伤为<span class="formula-highlight">1</span><br>
                     <span class="formula-highlight">抗性系数</span>/<span class="formula-highlight">防御系数</span>：见"防御力 抗性"板块<br>
@@ -78,13 +78,18 @@
             <div class="formula-card">
                 <div class="formula-title">失衡</div>
                 <div class="formula-text">
-                    角色造成的失衡值：<br><br>
+                    代理人造成的失衡值：<br><br>
                     <div class="formula-center-bold">失衡值累积 = 基础值 × (1 + 失衡值提升% + 失衡值降低%) × (1 + 受到失衡值提升% - 受到失衡值降低%) × 抗性系数 × 特殊独立乘区</div><br><br>
                     <span class="formula-highlight">基础值</span>：冲击力 × 失衡倍率<br><br>
                     <span class="formula-highlight">失衡值提升</span>：描述中带有【我方造成的失衡值提升<span class="formula-highlight">X%</span>】的效果<br>
                     <span class="formula-highlight">受到失衡值提升</span>：描述中带有【敌方受到的失衡值提升<span class="formula-highlight">X%</span>】的效果<br>
-                    <span class="formula-highlight">抗性系数</span>：见“防御力 抗性”板块
-                    <span class="formula-highlight">特殊独立乘区</span>：如距离衰减区等极为特殊的效果
+                    <span class="formula-highlight">抗性系数</span>：见"防御力 抗性"板块<br>
+                    <span class="formula-highlight">特殊独立乘区</span>：如距离衰减区等极为特殊的效果<br><br><br>
+                    失衡状态的触发：<br>
+                    敌人的失衡值积累到上限后不会立刻进入失衡，此时失衡条变为红黄闪烁状态，且敌人仍可行动；此时使用可触发失衡状态的攻击才能使敌人进入失衡（常见的可触发失衡状态的攻击：仅有单段的攻击、具有多段攻击的最后一击、重击（需等待角色动作结束））<br>
+                    敌人进入失衡后，不再具有行动能力，且代理人造成的伤害可获得失衡易伤的加成；获得若干次发动连携技的次数：使用重击命中敌人后，可进入连携技窗口，选择代理人释放连携技，连携技具有<span class="formula-highlight">1</span>秒的补偿时间，且仅有<span class="formula-highlight">1</span>次补偿次数，此后敌人开始以失衡恢复速度减少失衡值<br>（大多数情况下普通/精英/首领敌人分别具有<span class="formula-highlight">1</span>/<span class="formula-highlight">2</span>/<span class="formula-highlight">3</span>次连携技次数）<br><br><br>
+                    改变失衡时间的方法有两种：失衡恢复速度和延长失衡时间<br>
+                    游戏中敌人的失衡持续时间在【怪物】板块均有备注，可用(<span class="formula-highlight">1</span>÷失衡持续时间)计算出失衡恢复速度
                 </div>
             </div>
             <div class="formula-card">
