@@ -7,7 +7,7 @@
     <link rel="preload" as="image" href="image/bg.jpg">
     <link rel="preload" as="image" href="image/menu.png">
     <link rel="preload" as="image" href="image/logo.png">
-    <link rel="stylesheet" href="style-formulas.css">
+    <link rel="stylesheet" href="style-formulas.css?v=99">
 </head>
 <body>
     <div class="star-bg"></div>
@@ -111,6 +111,7 @@
         (function() {
             var menuIcon = document.getElementById('menuIcon');
             var menuDialog = document.getElementById('menuDialog');
+            var menuContainer = document.querySelector('.menu-container');
             
             if (!menuIcon || !menuDialog) return;
             
@@ -125,7 +126,11 @@
                 e.stopPropagation();
                 if (menuDialog.classList.contains('show')) {
                     menuDialog.classList.remove('show');
+                    if (menuDialog.parentElement !== menuContainer) {
+                        menuContainer.appendChild(menuDialog);
+                    }
                 } else {
+                    document.body.appendChild(menuDialog);
                     updateDialogPosition();
                     menuDialog.classList.add('show');
                 }
@@ -135,6 +140,9 @@
                 if (menuDialog.classList.contains('show')) {
                     if (!menuDialog.contains(e.target) && e.target !== menuIcon) {
                         menuDialog.classList.remove('show');
+                        if (menuDialog.parentElement !== menuContainer) {
+                            menuContainer.appendChild(menuDialog);
+                        }
                     }
                 }
             });
