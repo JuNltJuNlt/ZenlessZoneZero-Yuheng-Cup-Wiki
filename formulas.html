@@ -70,7 +70,7 @@
                     代理人造成的常规伤害：<br><br>
                     <div class="formula-center-bold">最终伤害 = 基础值 × (1 + 增伤% + 代理人减伤%) × (1 + 暴击伤害%) × (1 + 受击方易伤% - 受击方减伤%) × 失衡易伤% × 抗性系数 × 防御系数 × 特殊独立乘区</div><br><br>
                     <span class="formula-highlight">基础值</span>：攻击力 × 倍率，攻击力可以替换为其他属性（贯穿力、防御力等）<br><br>
-                    <span class="formula-highlight">增伤</span>：描述中带有【代理人造成的伤害提升<span class="formula-highlight">X%</span>】的效果，但特别注意：贯穿增伤不与常规增伤加算，而是独立计算<br>
+                    <span class="formula-highlight">增伤</span>：描述中带有【代理人造成的伤害提升<span class="formula-highlight">X%</span>】的效果，但特别注意：贯穿增伤、「风化」期间的直伤提升不与常规增伤加算，而是独立计算<br>
                     <span class="formula-highlight">易伤</span>：描述中带有【敌方受到的伤害提升<span class="formula-highlight">X%</span>】的效果<br>
                     <span class="formula-highlight">失衡易伤</span>：目前游戏中敌人的失衡易伤大多数为<span class="formula-highlight">125%</span>、<span class="formula-highlight">150%</span>、<span class="formula-highlight">200%</span>，且基本上只能在失衡期间触发；敌人未处于失衡时，失衡易伤为<span class="formula-highlight">1</span><br>
                     <span class="formula-highlight">抗性系数</span>/<span class="formula-highlight">防御系数</span>：见"防御力 抗性"板块<br>
@@ -95,8 +95,33 @@
                 </div>
             </div>
             <div class="formula-card">
-                <div class="formula-title">标题4</div>
-                <div class="formula-text">文本4</div>
+                <div class="formula-title">异常积蓄 异常效果</div>
+                <div class="formula-text">
+                    代理人造成的异常积蓄值：<br><br>
+                    <div class="formula-center-bold">
+                        异常积蓄值 = 基础值 × (1 + 
+                        <span class="formula-fraction">
+                            <span class="fraction-top">异常掌控</span>
+                            <span class="fraction-line"></span>
+                            <span class="fraction-bottom">100</span>
+                        </span>
+                        ) × (1 + 异常积蓄效率提升% - 异常积蓄效率降低%) × 抗性系数 × 特殊独立乘区
+                    </div><br><br>
+                    <span class="formula-highlight">基础值</span>：代理人每个技能的基础异常积蓄值，各个代理人独一无二，且不随等级增长<br><br>
+                    <span class="formula-highlight">异常积蓄效率提升</span>：描述中带有【我方的属性异常积蓄效率提升<span class="formula-highlight">X%</span>】的效果；"异常积蓄效率提升"和"异常积蓄值提升"是一样的效果<br>
+                    <span class="formula-highlight">抗性系数</span>：见"防御力 抗性"板块<br>
+                    <span class="formula-highlight">特殊独立乘区</span>：如距离衰减区等极为特殊的效果<br><br><br>
+                    关于异常积蓄的其他知识：<br>
+                    ① 非物理属性代理人的物理伤害无法积蓄物理异常积蓄<br>
+                    ② 火、冰、电、以太四种属性的异常条长度为标准长度，物理属性的异常条长度为<span class="formula-highlight">120%</span>，风属性的前两次异常条长度分别为<span class="formula-highlight">50%</span>/<span class="formula-highlight">80%</span>-<span class="formula-highlight">90%</span>，第三次开始也为标准长度<br><br><br>
+                    各属性异常效果：<br>
+                    （火）灼烧：「灼烧」状态默认持续<span class="formula-highlight">10</span>秒，持续期间每隔<span class="formula-highlight">0.5</span>秒会对敌人造成<span class="formula-highlight">50%</span>攻击力的火属性异常伤害。<br>
+                    （冰）冻结：对敌人同时施加「冻结」和「霜寒」效果，后者可使敌人受到的暴击伤害提升<span class="formula-highlight">10%</span>，持续<span class="formula-highlight">10</span>秒（烈霜异常为<span class="formula-highlight">20</span>秒），前者可使敌人无法行动，若处于失衡还将暂停失衡恢复，冻结时间结束时或受到重击时，将触发「碎冰」，打断敌人行动，并造成<span class="formula-highlight">500%</span>攻击力的冰/烈霜属性伤害；冻结时长 = <span class="formula-highlight">2</span> + <span class="formula-highlight">1.5</span> × (1 - 冻结时间抵抗%)，普通/精英/首领分别为<span class="formula-highlight">0%</span>/<span class="formula-highlight">50%</span>/<span class="formula-highlight">75%</span>，也有一部分敌人免疫「冻结」，触发后立即「碎冰」<br>
+                    （电）感电：「感电」状态默认持续<span class="formula-highlight">10</span>秒，持续期间敌人受到攻击时将对敌人造成<span class="formula-highlight">125%</span>攻击力的电属性异常伤害，每秒至多造成<span class="formula-highlight">1</span>次伤害，至多造成<span class="formula-highlight">16</span>次伤害。<br>
+                    （物理）强击：「强击」会对敌人造成一次<span class="formula-highlight">713%</span>攻击力的物理属性异常伤害，同时敌人会被施加「畏缩」效果：「畏缩」默认持续<span class="formula-highlight">10</span>秒，持续期间敌人受到失衡值提升<span class="formula-highlight">7.5%</span>。注意，非物理属性代理人无法积累物理属性异常积蓄<br>
+                    （以太）侵蚀：「侵蚀」状态默认持续<span class="formula-highlight">10</span>秒，持续期间敌人受到攻击将对敌人造成<span class="formula-highlight">62.5%</span>攻击力的以太或玄墨属性异常伤害，每<span class="formula-highlight">0.5</span>秒至多造成<span class="formula-highlight">1</span>次伤害。<br>
+                    （风）风化、浸染：「风化」会对敌人造成一次<span class="formula-highlight">1250%</span>攻击力的风属性异常伤害，同时敌人会被施加「风化」效果：「风化」默认持续<span class="formula-highlight">30</span>秒，持续期间敌人受到的风属性直伤将基于代理人的风化系数获得提升；处于「风化」的敌人首次受到其他属性代理人的对应属性的伤害时，则会触发对应属性的「浸染」，使该属性直伤也能受到风化系数的加成
+                </div>
             </div>
             <div class="formula-card">
                 <div class="formula-title">标题5</div>
