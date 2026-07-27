@@ -115,21 +115,31 @@
                     ① 非物理属性代理人的物理伤害无法积蓄物理异常积蓄<br>
                     ② 火、冰、电、以太四种属性的异常条长度为标准长度，物理属性的异常条长度为<span class="formula-highlight">120%</span>，风属性的前两次异常条长度分别为<span class="formula-highlight">50%</span>/<span class="formula-highlight">80%</span>-<span class="formula-highlight">90%</span>，第三次开始也为标准长度<br><br><br>
                     各属性异常效果：<br>
-                    （火）灼烧：「灼烧」状态默认持续<span class="formula-highlight">10</span>秒，持续期间每隔<span class="formula-highlight">0.5</span>秒会对敌人造成<span class="formula-highlight">50%</span>攻击力的火属性异常伤害。<br>
-                    （冰）冻结：对敌人同时施加「冻结」和「霜寒」效果，后者可使敌人受到的暴击伤害提升<span class="formula-highlight">10%</span>，持续<span class="formula-highlight">10</span>秒（烈霜异常为<span class="formula-highlight">20</span>秒），前者可使敌人无法行动，若处于失衡还将暂停失衡恢复，冻结时间结束时或受到重击时，将触发「碎冰」，打断敌人行动，并造成<span class="formula-highlight">500%</span>攻击力的冰/烈霜属性伤害；冻结时长 = <span class="formula-highlight">2</span> + <span class="formula-highlight">1.5</span> × (1 - 冻结时间抵抗%)，普通/精英/首领分别为<span class="formula-highlight">0%</span>/<span class="formula-highlight">50%</span>/<span class="formula-highlight">75%</span>，也有一部分敌人免疫「冻结」，触发后立即「碎冰」<br>
-                    （电）感电：「感电」状态默认持续<span class="formula-highlight">10</span>秒，持续期间敌人受到攻击时将对敌人造成<span class="formula-highlight">125%</span>攻击力的电属性异常伤害，每秒至多造成<span class="formula-highlight">1</span>次伤害，至多造成<span class="formula-highlight">16</span>次伤害。<br>
-                    （物理）强击：「强击」会对敌人造成一次<span class="formula-highlight">713%</span>攻击力的物理属性异常伤害，同时敌人会被施加「畏缩」效果：「畏缩」默认持续<span class="formula-highlight">10</span>秒，持续期间敌人受到失衡值提升<span class="formula-highlight">7.5%</span>。注意，非物理属性代理人无法积累物理属性异常积蓄<br>
-                    （以太）侵蚀：「侵蚀」状态默认持续<span class="formula-highlight">10</span>秒，持续期间敌人受到攻击将对敌人造成<span class="formula-highlight">62.5%</span>攻击力的以太或玄墨属性异常伤害，每<span class="formula-highlight">0.5</span>秒至多造成<span class="formula-highlight">1</span>次伤害。<br>
-                    （风）风化、浸染：「风化」会对敌人造成一次<span class="formula-highlight">1250%</span>攻击力的风属性异常伤害，同时敌人会被施加「风化」效果：「风化」默认持续<span class="formula-highlight">30</span>秒，持续期间敌人受到的风属性直伤将基于代理人的风化系数获得提升；处于「风化」的敌人首次受到其他属性代理人的对应属性的伤害时，则会触发对应属性的「浸染」，使该属性直伤也能受到风化系数的加成
+                    <span class="formula-highlight">（火）灼烧</span>：「灼烧」状态默认持续<span class="formula-highlight">10</span>秒，持续期间每隔<span class="formula-highlight">0.5</span>秒会对敌人造成<span class="formula-highlight">50%</span>攻击力的火属性异常伤害。<br>
+                    <span class="formula-highlight">（冰）冻结</span>：对敌人同时施加「冻结」和「霜寒」效果，后者可使敌人受到的暴击伤害提升<span class="formula-highlight">10%</span>，持续<span class="formula-highlight">10</span>秒（烈霜异常为<span class="formula-highlight">20</span>秒），前者可使敌人无法行动，若处于失衡还将暂停失衡恢复，冻结时间结束时或受到重击时，将触发「碎冰」，打断敌人行动，并造成<span class="formula-highlight">500%</span>攻击力的冰/烈霜属性伤害；冻结时长 = <span class="formula-highlight">2</span> + <span class="formula-highlight">1.5</span> × (1 - 冻结时间抵抗%)，普通/精英/首领分别为<span class="formula-highlight">0%</span>/<span class="formula-highlight">50%</span>/<span class="formula-highlight">75%</span>，也有一部分敌人免疫「冻结」，触发后立即「碎冰」<br>
+                    <span class="formula-highlight">（电）感电</span>：「感电」状态默认持续<span class="formula-highlight">10</span>秒，持续期间敌人受到攻击时将对敌人造成<span class="formula-highlight">125%</span>攻击力的电属性异常伤害，每秒至多造成<span class="formula-highlight">1</span>次伤害，至多造成<span class="formula-highlight">16</span>次伤害。<br>
+                    <span class="formula-highlight">（物理）强击</span>：「强击」会对敌人造成一次<span class="formula-highlight">713%</span>攻击力的物理属性异常伤害，同时敌人会被施加「畏缩」效果：「畏缩」默认持续<span class="formula-highlight">10</span>秒，持续期间敌人受到失衡值提升<span class="formula-highlight">7.5%</span>。注意，非物理属性代理人无法积累物理属性异常积蓄<br>
+                    <span class="formula-highlight">（以太）侵蚀</span>：「侵蚀」状态默认持续<span class="formula-highlight">10</span>秒，持续期间敌人受到攻击将对敌人造成<span class="formula-highlight">62.5%</span>攻击力的以太或玄墨属性异常伤害，每<span class="formula-highlight">0.5</span>秒至多造成<span class="formula-highlight">1</span>次伤害。<br>
+                    <span class="formula-highlight">（风）风化、浸染</span>：「风化」会对敌人造成一次<span class="formula-highlight">1250%</span>攻击力的风属性异常伤害，同时敌人会被施加「风化」效果：「风化」默认持续<span class="formula-highlight">30</span>秒，持续期间敌人受到的风属性直伤将基于代理人的风化系数获得提升；处于「风化」的敌人首次受到其他属性代理人的对应属性的伤害时，则会触发对应属性的「浸染」，使该属性直伤也能受到风化系数的加成
                 </div>
             </div>
             <div class="formula-card">
-                <div class="formula-title">标题5</div>
-                <div class="formula-text">文本5</div>
+                <div class="formula-title">异常伤害 紊乱与乱流</div>
+                <div class="formula-text">妮可萝莉的研究</div>
             </div>
             <div class="formula-card">
-                <div class="formula-title">标题6</div>
-                <div class="formula-text">文本6</div>
+                <div class="formula-title">能量与闪能 喧响值</div>
+                <div class="formula-text">
+                    一段时间内的能量/闪能回复值：<br><br>
+                    <div class="formula-center-bold">能量/闪能回复值 = (能量/闪能自动回复 × 时间 + 其他能量/闪能获取途径) × (1 + 能量回复效率)</div><br><br>
+                    <span class="formula-highlight">能量/闪能自动回复</span>：处于战斗状态时，代理人每秒自动获得的能量值<br>
+                    <span class="formula-highlight">其他能量/闪能获取途径</span>：代理人可以通过「普通攻击」、「冲刺攻击」、「闪避反击」和「快速支援」四种攻击命中敌人回复能量，各个代理人独一无二<br>
+                    <span class="formula-highlight">能量/闪能回复效率</span>：可以加成能量/闪能自动回复、攻击或其他途径获得的能量/闪能回复效果，其范围为<span class="formula-highlight">0%</span>-<span class="formula-highlight">300%</span><br><br><br>
+                    喧响值回复的计算：<br><br>
+                    <div class="formula-center-bold">喧响值回复值 = 基础值 × (1 + 喧响值获得效率) × 伴随获得效率</div><br><br>
+                    <span class="formula-highlight">基础值</span>：代理人发动「普通攻击」、「特殊技」、「强化特殊技」等攻击时，都将回复一定数值的喧响值；各种特殊动作的基础值如下：<a href="https://img.nga.cn/attachments/mon_202506/26/axvkQ1ad-h4ovKjT3cSnt-au.webp" target="_blank">特殊动作基础喧响值回复表</a><br>
+                    <span class="formula-highlight">伴随获得效率</span>：任何代理人通过施放技能或造成特殊动作获得喧响值时，其他代理人也会伴随获得一定比例的喧响值，本规律与该代理人处于前台/后台无关，区分的是触发者和其他代理人；绝大部分代理人来说喧响值的伴随获得效率为<span class="formula-highlight">50%</span>，部分代理人会有所变动
+                </div>
             </div>
         </div>
     </div>
